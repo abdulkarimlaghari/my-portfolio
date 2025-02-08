@@ -1019,3 +1019,29 @@ body {
         font-size: 14px;
     }
 }
+
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    display: none;
+    z-index: 1000;
+}
+
+/* Styling for the "Coming Soon" Message */
+.coming-soon {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 30px;
+    border: 2px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    max-width: 600px;
+    margin: 0 auto;
+}

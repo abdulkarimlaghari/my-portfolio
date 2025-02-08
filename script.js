@@ -93,3 +93,24 @@ document.addEventListener("DOMContentLoaded", function () {
         if (event.key === "Escape") closeModal();
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const skillIcons = document.querySelectorAll(".skill-icon");
+
+    skillIcons.forEach(icon => {
+        const tooltip = document.createElement("div");
+        tooltip.className = "tooltip";
+        tooltip.textContent = icon.dataset.skill;
+        document.body.appendChild(tooltip);
+
+        icon.addEventListener("mouseenter", (event) => {
+            tooltip.style.display = "block";
+            tooltip.style.left = event.pageX + "px";
+            tooltip.style.top = (event.pageY - 30) + "px";
+        });
+
+        icon.addEventListener("mouseleave", () => {
+            tooltip.style.display = "none";
+        });
+    });
+});
